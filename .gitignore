@@ -1,0 +1,57 @@
+#
+# Project specific excludes
+#
+
+tomcat
+
+#
+# Default excludes
+#
+
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+#*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+
+# eclipse project file
+.settings/
+#.classpath
+#.project
+
+# OS
+.DS_Store
+
+# Misc
+*.swp
+release.properties
+pom.xml.releaseBackup
+pom.xml.tag
+/.metadata/
+
+
+# Plugins
+.sonarlint
+
+# txt
+    
+/GAB/data/fragments/PredefinedTypes 3.9.00/content/model/.index/*.0
+/GAB/data/fragments/PredefinedTypes 3.9.00/content/model/.index/*.t
+/GAB/data/fragments/PredefinedTypes 3.9.00/content/model/admin/*.dat
+
+/GAB/data/localmodel/*.0
+/GAB/data/localmodel/*.t
+/GAB/*.conf
+/TD1/GAB/.runtime/fragments/GAB/.index/*.0
+
+/TD1/GAB/data/fragments/ModelerModule/content/model/.index/*.0
+/TD1/GAB/data/fragments/PredefinedTypes 3.9.00/content/model/.index/*.0
+/TD1/GAB/data/localmodel/*.0
