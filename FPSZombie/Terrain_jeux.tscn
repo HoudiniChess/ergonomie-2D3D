@@ -1,44 +1,44 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Escalier.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Texture_sol2.jpg" type="Texture" id=2]
+[ext_resource path="res://Textures/Texture_sol2.jpg" type="Texture" id=2]
 [ext_resource path="res://Textures/texxture_horror.jpg" type="Texture" id=3]
 
 [sub_resource type="PlaneMesh" id=1]
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="ConvexPolygonShape" id=2]
+[sub_resource type="ConvexPolygonShape" id=3]
 points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
 
-[sub_resource type="CubeMesh" id=3]
+[sub_resource type="CubeMesh" id=4]
 
-[sub_resource type="SpatialMaterial" id=9]
-albedo_texture = ExtResource( 3 )
-
-[sub_resource type="ConvexPolygonShape" id=4]
-points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
-
-[sub_resource type="SpatialMaterial" id=10]
-albedo_texture = ExtResource( 3 )
-
-[sub_resource type="ConvexPolygonShape" id=5]
-points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
-
-[sub_resource type="SpatialMaterial" id=11]
-albedo_texture = ExtResource( 3 )
-
-[sub_resource type="SpatialMaterial" id=12]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_texture = ExtResource( 3 )
 
 [sub_resource type="ConvexPolygonShape" id=6]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
-[sub_resource type="SpatialMaterial" id=13]
+[sub_resource type="SpatialMaterial" id=7]
 albedo_texture = ExtResource( 3 )
 
-[sub_resource type="ConvexPolygonShape" id=7]
+[sub_resource type="ConvexPolygonShape" id=8]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="ConvexPolygonShape" id=11]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="ConvexPolygonShape" id=13]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
 [node name="Terrain_RDC" type="Spatial"]
@@ -48,11 +48,11 @@ points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1,
 [node name="MeshInstance" type="MeshInstance" parent="Sol"]
 transform = Transform( 75, 0, 0, 0, 1, 0, 0, 0, 75, 0, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = SubResource( 8 )
+material/0 = SubResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Sol"]
 transform = Transform( 75, 0, 0, 0, 1, 0, 0, 0, 75, 0, 0, 0 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Murs" type="Spatial" parent="."]
 
@@ -60,56 +60,56 @@ shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Sud"]
 transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, 75 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 9 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Sud"]
 transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, 75 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="Nord" type="StaticBody" parent="Murs"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Nord"]
 transform = Transform( 50, 0, 0, 0, 15, 0, 0, 0, 1, -25, 14, -75 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 10 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Nord"]
 transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, 75 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="Nord2" type="StaticBody" parent="Murs"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Nord2"]
 transform = Transform( 10, 0, 0, 0, 15, 0, 0, 0, 1, 65, 14, -75 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 11 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Nord2"]
 transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, 75 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="Ouest" type="StaticBody" parent="Murs"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Ouest"]
 transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, 76, 14, 0 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 12 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Ouest"]
 transform = Transform( 75, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, -75 )
-shape = SubResource( 6 )
+shape = SubResource( 11 )
 
 [node name="Est" type="StaticBody" parent="Murs"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Est"]
 transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, -76, 14, 0 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 13 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Est"]
 transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, 76, 14, 0 )
-shape = SubResource( 7 )
+shape = SubResource( 13 )
 
 [node name="Escalier" parent="." instance=ExtResource( 1 )]
 transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -68, 0, 22 )
