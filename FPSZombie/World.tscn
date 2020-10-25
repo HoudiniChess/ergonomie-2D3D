@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Player/myNewLittleNinja.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escalier.tscn" type="PackedScene" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.996078, 0.0313726, 0.0313726, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.0431373, 0.113725, 0.498039, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.772549, 0.807843, 0.14902, 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.137255, 0.866667, 0.266667, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.0117647, 0.0117647, 0.0117647, 1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.0509804, 0.807843, 0.737255, 1 )
+
+[node name="World" type="Spatial"]
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 50, 0, 0, 0, 3, 0, 0, 0, 50, 0, 0, 0 )
+use_collision = true
+material = SubResource( 1 )
+
+[node name="CSGBox2" type="CSGBox" parent="."]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 18.4204, 15.7698, -32.0489 )
+use_collision = true
+material = SubResource( 2 )
+
+[node name="CSGBox3" type="CSGBox" parent="."]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 25.3939, 8.01761, 0 )
+use_collision = true
+material = SubResource( 3 )
+
+[node name="CSGBox4" type="CSGBox" parent="."]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -3.76747, 5.60857, 9.9445 )
+use_collision = true
+material = SubResource( 4 )
+
+[node name="CSGBox5" type="CSGBox" parent="."]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 27.1599, 30.3417, 29.3898 )
+use_collision = true
+material = SubResource( 5 )
+
+[node name="CSGBox6" type="CSGBox" parent="."]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -3.76747, 22.2805, 0 )
+use_collision = true
+material = SubResource( 6 )
+
+[node name="Escalier" parent="." instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 4, 0, 0, 0, 3, -41, 3, 5 )
+
+[node name="myNewLittleNinja" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -10, 0, -40 )
