@@ -22,12 +22,12 @@ albedo_texture = ExtResource( 1 )
 [sub_resource type="SpatialMaterial" id=8]
 albedo_texture = ExtResource( 1 )
 
-[sub_resource type="BoxShape" id=18]
+[sub_resource type="BoxShape" id=9]
 
 [sub_resource type="SpatialMaterial" id=10]
 albedo_texture = ExtResource( 1 )
 
-[sub_resource type="BoxShape" id=19]
+[sub_resource type="BoxShape" id=11]
 
 [sub_resource type="SpatialMaterial" id=12]
 albedo_texture = ExtResource( 1 )
@@ -88,7 +88,7 @@ material/0 = SubResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Marche4"]
 transform = Transform( 3, 0, 0, 0, 2, 0, 0, 0, 1, 0, 2, 6 )
-shape = SubResource( 18 )
+shape = SubResource( 9 )
 
 [node name="Marche5" type="StaticBody" parent="."]
 
@@ -99,7 +99,7 @@ material/0 = SubResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Marche5"]
 transform = Transform( 3, 0, 0, 0, 2.5, 0, 0, 0, 1, 0, 2.5, 8 )
-shape = SubResource( 19 )
+shape = SubResource( 11 )
 
 [node name="Marche6" type="StaticBody" parent="."]
 
