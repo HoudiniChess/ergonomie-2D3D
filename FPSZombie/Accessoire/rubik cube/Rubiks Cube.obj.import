@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Rubiks Cube.obj-9f258419d559580f16cf5bdb6060f3f6.mesh"
+
+[deps]
+
+files=[ "res://.import/Rubiks Cube.obj-9f258419d559580f16cf5bdb6060f3f6.mesh" ]
+
+source_file="res://Accessoire/rubik cube/Rubiks Cube.obj"
+dest_files=[ "res://.import/Rubiks Cube.obj-9f258419d559580f16cf5bdb6060f3f6.mesh", "res://.import/Rubiks Cube.obj-9f258419d559580f16cf5bdb6060f3f6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/uploads_files_2531665_TrollDoll.obj-8c1ca6ee252ddd64fd412f3839433428.mesh"
+
+[deps]
+
+files=[ "res://.import/uploads_files_2531665_TrollDoll.obj-8c1ca6ee252ddd64fd412f3839433428.mesh" ]
+
+source_file="res://Accessoire/Poupées/troll/uploads_files_2531665_TrollDoll.obj"
+dest_files=[ "res://.import/uploads_files_2531665_TrollDoll.obj-8c1ca6ee252ddd64fd412f3839433428.mesh", "res://.import/uploads_files_2531665_TrollDoll.obj-8c1ca6ee252ddd64fd412f3839433428.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

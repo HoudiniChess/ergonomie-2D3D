@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Table2.obj-08cad5dbad9e0e64bb8892f63b39ac3e.mesh"
+
+[deps]
+
+files=[ "res://.import/Table2.obj-08cad5dbad9e0e64bb8892f63b39ac3e.mesh" ]
+
+source_file="res://Accessoire/Porte/Table2.obj"
+dest_files=[ "res://.import/Table2.obj-08cad5dbad9e0e64bb8892f63b39ac3e.mesh", "res://.import/Table2.obj-08cad5dbad9e0e64bb8892f63b39ac3e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

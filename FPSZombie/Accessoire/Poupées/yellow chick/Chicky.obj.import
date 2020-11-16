@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Chicky.obj-95f15cbb780560e1ebc1a854f8a00048.mesh"
+
+[deps]
+
+files=[ "res://.import/Chicky.obj-95f15cbb780560e1ebc1a854f8a00048.mesh" ]
+
+source_file="res://Accessoire/Poupées/yellow chick/Chicky.obj"
+dest_files=[ "res://.import/Chicky.obj-95f15cbb780560e1ebc1a854f8a00048.mesh", "res://.import/Chicky.obj-95f15cbb780560e1ebc1a854f8a00048.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

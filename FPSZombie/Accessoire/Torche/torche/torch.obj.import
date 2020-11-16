@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/torch.obj-c6be6c31e14474a9eb8ca30e544b8220.mesh"
+
+[deps]
+
+files=[ "res://.import/torch.obj-c6be6c31e14474a9eb8ca30e544b8220.mesh" ]
+
+source_file="res://Accessoire/Torche/torche/torch.obj"
+dest_files=[ "res://.import/torch.obj-c6be6c31e14474a9eb8ca30e544b8220.mesh", "res://.import/torch.obj-c6be6c31e14474a9eb8ca30e544b8220.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
