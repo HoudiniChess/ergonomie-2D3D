@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Player/myNewLittleNinja.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/TheRealNinja.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escalier.tscn" type="PackedScene" id=2]
 
 [sub_resource type="SpatialMaterial" id=1]
@@ -24,7 +24,7 @@ albedo_color = Color( 0.0509804, 0.807843, 0.737255, 1 )
 [node name="World" type="Spatial"]
 
 [node name="CSGBox" type="CSGBox" parent="."]
-transform = Transform( 50, 0, 0, 0, 3, 0, 0, 0, 50, 0, 0, 0 )
+transform = Transform( 50, 0, 0, 0, 3, 0, 0, 0, 50, -0.943094, 1.90735e-06, 0.0171509 )
 use_collision = true
 material = SubResource( 1 )
 
@@ -56,5 +56,7 @@ material = SubResource( 6 )
 [node name="Escalier" parent="." instance=ExtResource( 2 )]
 transform = Transform( 3, 0, 0, 0, 4, 0, 0, 0, 3, -41, 3, 5 )
 
-[node name="myNewLittleNinja" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -10, 0, -40 )
+[node name="TPOSE" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -30, 3, -30 )
+
+[editable path="TPOSE"]
