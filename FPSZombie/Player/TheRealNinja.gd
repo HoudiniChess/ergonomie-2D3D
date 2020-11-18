@@ -10,6 +10,7 @@ export var jump_power : float = 30
 export(float, 0.1, 1) var mouse_sensitivity : float = 0.3
 export(float, -40, 0) var min_pitch : float = -40
 export(float, 0, 50) var max_pitch : float = 50
+export (PackedScene) var Bullet
 
 var velocity : Vector3
 var y_velocity : float
@@ -24,6 +25,11 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	if Input.is_action_just_pressed("shoot"):
+		var b = Bullet.instance()
+		owner.add_child(b)
+		b.transform = $Fist.global_transform
+		b.velocity = b.transform.basis.z * b.muzzle_velocity
 		
 func _input(event):
 	if event is InputEventMouseMotion:

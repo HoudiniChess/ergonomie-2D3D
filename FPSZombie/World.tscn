@@ -56,7 +56,5 @@ material = SubResource( 6 )
 [node name="Escalier" parent="." instance=ExtResource( 2 )]
 transform = Transform( 3, 0, 0, 0, 4, 0, 0, 0, 3, -41, 3, 5 )
 
-[node name="TPOSE" parent="." instance=ExtResource( 1 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -30, 3, -30 )
-
-[editable path="TPOSE"]
+[node name="TheRealNinja" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -20, 3, -40 )
