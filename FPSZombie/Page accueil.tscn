@@ -26,10 +26,10 @@ __meta__ = {
 }
 
 [node name="Nom" type="TextureRect" parent="."]
-margin_left = 63.5443
-margin_top = 228.246
-margin_right = 623.544
-margin_bottom = 308.246
+margin_left = 62.1301
+margin_top = 226.832
+margin_right = 622.13
+margin_bottom = 306.832
 texture = ExtResource( 2 )
 script = ExtResource( 5 )
 __meta__ = {
@@ -37,11 +37,11 @@ __meta__ = {
 }
 
 [node name="Start" type="TextureRect" parent="."]
-margin_left = 233.415
-margin_top = 297.56
-margin_right = 1130.42
-margin_bottom = 523.56
-rect_scale = Vector2( 0.2, 0.2 )
+margin_left = 176.645
+margin_top = 289.05
+margin_right = 1076.64
+margin_bottom = 515.05
+rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 script = ExtResource( 4 )
 __meta__ = {
