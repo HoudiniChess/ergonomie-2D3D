@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/laura_piano_jeu_ambiance.wav-a05780badcd267d558387dad83ad1cf2.sample"
+
+[deps]
+
+source_file="res://Son/laura_piano_jeu_ambiance.wav"
+dest_files=[ "res://.import/laura_piano_jeu_ambiance.wav-a05780badcd267d558387dad83ad1cf2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

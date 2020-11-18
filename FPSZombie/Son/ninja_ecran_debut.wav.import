@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ninja_ecran_debut.wav-286cbbac5500e22b8ce6376661a611ec.sample"
+
+[deps]
+
+source_file="res://Son/ninja_ecran_debut.wav"
+dest_files=[ "res://.import/ninja_ecran_debut.wav-286cbbac5500e22b8ce6376661a611ec.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
