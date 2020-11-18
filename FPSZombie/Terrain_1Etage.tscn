@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Textures/Texture_sol2.jpg" type="Texture" id=1]
 [ext_resource path="res://Textures/texxture_horror.jpg" type="Texture" id=2]
@@ -14,6 +14,11 @@ albedo_texture = ExtResource( 1 )
 
 [sub_resource type="ConvexPolygonShape" id=3]
 points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
+
+[sub_resource type="PlaneMesh" id=15]
+
+[sub_resource type="SpatialMaterial" id=16]
+albedo_texture = ExtResource( 1 )
 
 [sub_resource type="ConvexPolygonShape" id=4]
 points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
@@ -44,28 +49,31 @@ albedo_texture = ExtResource( 2 )
 [sub_resource type="ConvexPolygonShape" id=13]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
+[sub_resource type="ConvexPolygonShape" id=14]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
 [node name="Terrain_1Etage" type="Spatial"]
 
 [node name="sol1" type="StaticBody" parent="."]
 
 [node name="MeshInstance" type="MeshInstance" parent="sol1"]
-transform = Transform( 75, 0, 0, 0, 1, 0, 0, 0, 55, -0.0279994, 0, -20.4682 )
+transform = Transform( 75, 0, 0, 0, 1, 0, 0, 0, 55, 0, 0, -20 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="sol1"]
-transform = Transform( 75, 0, 0, 0, 1, 0, 0, 0, 75, 0, 0, 0 )
+transform = Transform( 75, 0, 0, 0, 1, 0, 0, 0, 55, -0.0279994, 0, -20.4682 )
 shape = SubResource( 3 )
 
 [node name="sol2" type="StaticBody" parent="."]
 
 [node name="MeshInstance" type="MeshInstance" parent="sol2"]
-transform = Transform( 60, 0, 0, 0, 1, 0, 0, 0, 20, 15, 0, 55 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+transform = Transform( 60.5, 0, 0, 0, 1, 0, 0, 0, 20, 14.5, 0, 55 )
+mesh = SubResource( 15 )
+material/0 = SubResource( 16 )
 
 [node name="CollisionShape" type="CollisionShape" parent="sol2"]
-transform = Transform( 75, 0, 0, 0, 1, 0, 0, 0, 55, 0.112, 0, -20 )
+transform = Transform( 60, 0, 0, 0, 1, 0, 0, 0, 20, 15, 0, 55 )
 shape = SubResource( 4 )
 
 [node name="Murs" type="Spatial" parent="."]
@@ -73,7 +81,7 @@ shape = SubResource( 4 )
 [node name="Sud" type="StaticBody" parent="Murs"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Sud"]
-transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, 75 )
+transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 15, 75 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 6 )
 
@@ -84,7 +92,7 @@ shape = SubResource( 7 )
 [node name="Nord" type="StaticBody" parent="Murs"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Nord"]
-transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, -75 )
+transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 15, -75 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 8 )
 
@@ -95,7 +103,7 @@ shape = SubResource( 9 )
 [node name="Ouest" type="StaticBody" parent="Murs"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Ouest"]
-transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, -76, 14, 0 )
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, -76, 15, 0 )
 material_override = SubResource( 10 )
 mesh = SubResource( 5 )
 material/0 = null
@@ -107,7 +115,7 @@ shape = SubResource( 11 )
 [node name="Est" type="StaticBody" parent="Murs"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Est"]
-transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, 76, 14, 0 )
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, 76, 15, 0 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 12 )
 
@@ -118,13 +126,13 @@ shape = SubResource( 13 )
 [node name="Mur sorti escalier" type="StaticBody" parent="Murs"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Murs/Mur sorti escalier"]
-transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 55, -45, 14, 20 )
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 55, -25, 15, 20 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Mur sorti escalier"]
-transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, 75, 15, 0 )
-shape = SubResource( 13 )
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 55, -25, 14, 20 )
+shape = SubResource( 14 )
 
 [node name="Accessoires" type="Spatial" parent="."]
 
@@ -132,25 +140,22 @@ shape = SubResource( 13 )
 
 [node name="Mur sortis escalier (coté escaler)" type="Spatial" parent="Accessoires/Torches"]
 
-[node name="Torche" parent="Accessoires/Torches/Mur sortis escalier (coté escaler)" instance=ExtResource( 3 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -47, 15, 60 )
-
 [node name="Torche2" parent="Accessoires/Torches/Mur sortis escalier (coté escaler)" instance=ExtResource( 3 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -47, 15, 20 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -22, 15, 20 )
 
 [node name="Torche3" parent="Accessoires/Torches/Mur sortis escalier (coté escaler)" instance=ExtResource( 3 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -47, 15, -20 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -22, 15, -20 )
 
 [node name="Mur sortis escalier (coté salle)" type="Spatial" parent="Accessoires/Torches"]
 
 [node name="Torche" parent="Accessoires/Torches/Mur sortis escalier (coté salle)" instance=ExtResource( 3 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -43, 15, 60 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -28, 15, 60 )
 
 [node name="Torche2" parent="Accessoires/Torches/Mur sortis escalier (coté salle)" instance=ExtResource( 3 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -43, 15, 20 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -28, 15, 20 )
 
 [node name="Torche3" parent="Accessoires/Torches/Mur sortis escalier (coté salle)" instance=ExtResource( 3 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -43, 15, -20 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -28, 15, -20 )
 
 [node name="Mur sortis escalier (face escaler)" type="Spatial" parent="Accessoires/Torches"]
 
@@ -215,25 +220,25 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 60, 15, 73 )
 [node name="Troll" type="Spatial" parent="Accessoires/Poupées"]
 
 [node name="troll" parent="Accessoires/Poupées/Troll" instance=ExtResource( 5 )]
-transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 60, 0, 71 )
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 60, 1.5, 71 )
 
 [node name="troll2" parent="Accessoires/Poupées/Troll" instance=ExtResource( 5 )]
-transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 20, 0, 71 )
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 20, 1.5, 71 )
 
 [node name="troll3" parent="Accessoires/Poupées/Troll" instance=ExtResource( 5 )]
-transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -20, 0, 71 )
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -20, 1.5, 71 )
 
 [node name="troll4" parent="Accessoires/Poupées/Troll" instance=ExtResource( 5 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 60, 0, -71 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 60, 1.5, -71 )
 
 [node name="troll5" parent="Accessoires/Poupées/Troll" instance=ExtResource( 5 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 20, 0, -71 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 20, 1.5, -71 )
 
 [node name="troll6" parent="Accessoires/Poupées/Troll" instance=ExtResource( 5 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -20, 0, -71 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -20, 1.5, -71 )
 
 [node name="troll7" parent="Accessoires/Poupées/Troll" instance=ExtResource( 5 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -60, 0, -71 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -60, 1.5, -71 )
 
 [node name="Yellow chick" type="Spatial" parent="Accessoires/Poupées"]
 
@@ -249,14 +254,11 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 70, 0, 
 [node name="yellow chick4" parent="Accessoires/Poupées/Yellow chick" instance=ExtResource( 4 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 70, 0, -60 )
 
-[node name="yellow chick5" parent="Accessoires/Poupées/Yellow chick" instance=ExtResource( 4 )]
-transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -40, 0, 60 )
-
 [node name="yellow chick6" parent="Accessoires/Poupées/Yellow chick" instance=ExtResource( 4 )]
-transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -40, 0, 20 )
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -20, 0, 20 )
 
 [node name="yellow chick7" parent="Accessoires/Poupées/Yellow chick" instance=ExtResource( 4 )]
-transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -40, 0, -20 )
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -20, 0, -20 )
 
-[node name="Toit" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, 0 )
+[node name="Toit 1er étage" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0267601, 28.8721, -0.184578 )

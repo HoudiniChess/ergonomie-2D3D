@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Escalier.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Textures/Texture_sol2.jpg" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Accessoire/Torche/Torche.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Player/TheRealNinja.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Terrain_1Etage.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Toit RDC.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Accessoire/Poupées/troll/troll.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Accessoire/Poupées/yellow chick/yellow chick.tscn" type="PackedScene" id=20]
 
@@ -25,7 +26,7 @@
 [sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="ConvexPolygonShape" id=3]
+[sub_resource type="ConvexPolygonShape" id=30]
 points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
 
 [sub_resource type="CubeMesh" id=4]
@@ -33,31 +34,37 @@ points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
 [sub_resource type="SpatialMaterial" id=5]
 albedo_texture = ExtResource( 3 )
 
-[sub_resource type="ConvexPolygonShape" id=6]
+[sub_resource type="ConvexPolygonShape" id=31]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
-[sub_resource type="ConvexPolygonShape" id=7]
+[sub_resource type="ConvexPolygonShape" id=32]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
 [sub_resource type="SpatialMaterial" id=8]
 albedo_texture = ExtResource( 3 )
 
-[sub_resource type="ConvexPolygonShape" id=9]
+[sub_resource type="ConvexPolygonShape" id=33]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
 [sub_resource type="SpatialMaterial" id=10]
 albedo_texture = ExtResource( 3 )
 
+[sub_resource type="ConvexPolygonShape" id=34]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
 [sub_resource type="SpatialMaterial" id=11]
 albedo_texture = ExtResource( 3 )
 
-[sub_resource type="ConvexPolygonShape" id=12]
+[sub_resource type="ConvexPolygonShape" id=35]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
 [sub_resource type="SpatialMaterial" id=13]
 albedo_texture = ExtResource( 3 )
 
-[sub_resource type="ConvexPolygonShape" id=14]
+[sub_resource type="ConvexPolygonShape" id=36]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
+[sub_resource type="ConvexPolygonShape" id=37]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
 [sub_resource type="SpatialMaterial" id=15]
@@ -114,8 +121,8 @@ mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Sol"]
-transform = Transform( 75, 0, 0, 0, 1, 0, 0, 0, 75, 0, 0, 0 )
-shape = SubResource( 3 )
+transform = Transform( 75, 0, 0, 0, 1, 0, 0, 0, 75, -0.0491905, -0.0968437, -0.20595 )
+shape = SubResource( 30 )
 
 [node name="Murs" type="Spatial" parent="."]
 
@@ -128,7 +135,7 @@ material/0 = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Sud"]
 transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, 75 )
-shape = SubResource( 6 )
+shape = SubResource( 31 )
 
 [node name="Mur-Escalier" type="StaticBody" parent="Murs"]
 
@@ -139,7 +146,7 @@ material/0 = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Mur-Escalier"]
 transform = Transform( -8.96064e-06, 0, 1, 0, 15, 0, -55, 0, -1.62921e-07, -45, 14, 20 )
-shape = SubResource( 7 )
+shape = SubResource( 32 )
 
 [node name="Nord" type="StaticBody" parent="Murs"]
 
@@ -149,8 +156,8 @@ mesh = SubResource( 4 )
 material/0 = SubResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Nord"]
-transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, 75 )
-shape = SubResource( 9 )
+transform = Transform( 57, 0, 0, 0, 15, 0, 0, 0, 1, -20, 14, -75 )
+shape = SubResource( 33 )
 
 [node name="Nord2" type="StaticBody" parent="Murs"]
 
@@ -160,8 +167,8 @@ mesh = SubResource( 4 )
 material/0 = SubResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Nord2"]
-transform = Transform( 76, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, 75 )
-shape = SubResource( 9 )
+transform = Transform( 10, 0, 0, 0, 15, 0, 0, 0, 1, 65, 14, -75 )
+shape = SubResource( 34 )
 
 [node name="Ouest" type="StaticBody" parent="Murs"]
 
@@ -171,8 +178,8 @@ mesh = SubResource( 4 )
 material/0 = SubResource( 11 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Ouest"]
-transform = Transform( 75, 0, 0, 0, 15, 0, 0, 0, 1, 0, 14, -75 )
-shape = SubResource( 12 )
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, 76, 14, 0 )
+shape = SubResource( 35 )
 
 [node name="Est" type="StaticBody" parent="Murs"]
 
@@ -182,8 +189,8 @@ mesh = SubResource( 4 )
 material/0 = SubResource( 13 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Est"]
-transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, 76, 14, 0 )
-shape = SubResource( 14 )
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, -76, 14, 0 )
+shape = SubResource( 36 )
 
 [node name="Est2" type="StaticBody" parent="Murs"]
 
@@ -193,8 +200,8 @@ mesh = SubResource( 4 )
 material/0 = SubResource( 13 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Murs/Est2"]
-transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 76, 76, 14, 0 )
-shape = SubResource( 14 )
+transform = Transform( 1, 0, 0, 0, 15, 0, 0, 0, 56, -10, 14, -18 )
+shape = SubResource( 37 )
 
 [node name="Escalier" parent="." instance=ExtResource( 1 )]
 transform = Transform( 5.3, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -60, 0, 22 )
@@ -479,24 +486,27 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -15, 0,
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -50, 0, 15 )
 
 [node name="troll" parent="Accessoires/Poupee" instance=ExtResource( 19 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 70, 0, -72 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 70, 1, -72 )
 
 [node name="troll2" parent="Accessoires/Poupee" instance=ExtResource( 19 )]
-transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, -42, 0, 68 )
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, -42, 1, 68 )
 
 [node name="troll3" parent="Accessoires/Poupee" instance=ExtResource( 19 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -70, 0, -70 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -70, 1, -70 )
 
 [node name="troll4" parent="Accessoires/Poupee" instance=ExtResource( 19 )]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -73, 0, 14 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -73, 1, 14 )
 
 [node name="Spatial" type="Spatial" parent="Accessoires"]
 
 [node name="Porte" parent="Accessoires/Spatial" instance=ExtResource( 10 )]
 transform = Transform( 2.5, 0, 0, 0, 2.4, 0, 0, 0, 3, 47, -2, -75 )
 
-[node name="Terrain_1Etage" parent="." instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, 0 )
+[node name="myNewLittleNinja" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -70 )
 
-[node name="TheRealNinja" parent="." instance=ExtResource( 16 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
+[node name="Terrain_1Etage" parent="." instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, 0 )
+
+[node name="Toit RDC" parent="." instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, 0 )
