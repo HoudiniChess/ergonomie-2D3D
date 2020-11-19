@@ -1,7 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Player/TheRealNinja.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escalier.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Zombie/TheRealZombie.tscn" type="PackedScene" id=3]
+[ext_resource path="res://default_env.tres" type="Environment" id=4]
+[ext_resource path="res://Interactable/InteratableLightSwitch.gd" type="Script" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.996078, 0.0313726, 0.0313726, 1 )
@@ -10,7 +13,15 @@ albedo_color = Color( 0.996078, 0.0313726, 0.0313726, 1 )
 albedo_color = Color( 0.0431373, 0.113725, 0.498039, 1 )
 
 [sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0.772549, 0.807843, 0.14902, 1 )
+albedo_color = Color( 0.572549, 0.14902, 0.807843, 1 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.203922, 0.227451, 0.564706, 1 )
+
+[sub_resource type="CubeMesh" id=9]
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 1.21822, 1.23572, 1.88023 )
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.137255, 0.866667, 0.266667, 1 )
@@ -28,15 +39,36 @@ transform = Transform( 50, 0, 0, 0, 3, 0, 0, 0, 50, -0.943094, 1.90735e-06, 0.01
 use_collision = true
 material = SubResource( 1 )
 
+[node name="CSGBox7" type="CSGBox" parent="."]
+transform = Transform( 2.24436, 2.99698, 0.0212001, -49.9493, 0.134656, 0.180303, 0.17917, -0.00175633, 49.9997, 51.6893, 1.90735e-06, 0.0171509 )
+use_collision = true
+material = SubResource( 1 )
+
 [node name="CSGBox2" type="CSGBox" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 18.4204, 15.7698, -32.0489 )
 use_collision = true
 material = SubResource( 2 )
 
 [node name="CSGBox3" type="CSGBox" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 25.3939, 8.01761, 0 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 25.1171, 5.12551, 26.3049 )
 use_collision = true
 material = SubResource( 3 )
+
+[node name="cube" type="MeshInstance" parent="."]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 32.9334, 5.99582, 0.000375353 )
+layers = 3
+material_override = SubResource( 8 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="cube"]
+collision_layer = 2
+script = ExtResource( 5 )
+light = NodePath("../../SpotLight")
+on_by_default = false
+
+[node name="CollisionShape" type="CollisionShape" parent="cube/StaticBody"]
+shape = SubResource( 7 )
 
 [node name="CSGBox4" type="CSGBox" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -3.76747, 5.60857, 9.9445 )
@@ -58,3 +90,57 @@ transform = Transform( 3, 0, 0, 0, 4, 0, 0, 0, 3, -41, 3, 5 )
 
 [node name="TheRealNinja" parent="." instance=ExtResource( 1 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -20, 3, -40 )
+
+[node name="Zombies" type="Spatial" parent="."]
+transform = Transform( 0.700884, 0, -0.713275, 0, 1, 0, 0.713275, 0, 0.700884, 0, 0, -14.8374 )
+
+[node name="Zombie" parent="Zombies" instance=ExtResource( 3 )]
+transform = Transform( 0.723606, 0, 1.86451, 0, 2, 0, -1.86451, 0, 0.723606, -9.195, 3.01, 0.373 )
+
+[node name="Zombie2" parent="Zombies" instance=ExtResource( 3 )]
+transform = Transform( 1.40848, 0, -1.41993, 0, 2, 0, 1.41993, 0, 1.40848, 5.857, 3.01, -26.088 )
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.51984
+margin_top = -2.51984
+margin_right = -2.51984
+margin_bottom = -2.51984
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -258.0
+margin_top = -65.0
+text = "Ammo
+2/2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InteractionLabel" type="Label" parent="UI"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -218.0
+margin_bottom = 2.0
+text = "Press e to interact"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 0.999518, -0.0310619, 0, 0.00684522, 0.220268, 0.975416, -0.0302982, -0.974945, 0.220374, 12.7562, 33.2127, -0.234276 )
+spot_range = 42.7656
+spot_angle = 80.1563
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 4 )
