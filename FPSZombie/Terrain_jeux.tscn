@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Escalier.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Textures/Texture_sol2.jpg" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Accessoire/Poupées/yellow chick/yellow chick.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Son/laura_piano_jeu_ambiance.wav" type="AudioStream" id=21]
 [ext_resource path="res://Terrain_jeux.gd" type="Script" id=22]
+[ext_resource path="res://Gui.tscn" type="PackedScene" id=23]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -506,7 +507,7 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -73, 1,
 transform = Transform( 2.5, 0, 0, 0, 2.4, 0, 0, 0, 3, 47, -2, -75 )
 
 [node name="myNewLittleNinja" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -70 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.8725, 0, -61.2831 )
 
 [node name="Terrain_1Etage" parent="." instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, 0 )
@@ -516,3 +517,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, 0 )
 
 [node name="BackAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
+
+[node name="Gui" parent="." instance=ExtResource( 23 )]
