@@ -7,18 +7,18 @@
 [ext_resource path="res://Page accueil.gd" type="Script" id=7]
 
 [node name="Accueil" type="Control"]
-anchor_right = 1.024
-anchor_bottom = 0.993
-margin_right = 0.279907
-margin_bottom = 0.039978
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.0
+margin_bottom = 4.0
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 641.0
-margin_bottom = 361.0
+margin_right = 1021.0
+margin_bottom = 600.0
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 1
@@ -27,20 +27,20 @@ __meta__ = {
 }
 
 [node name="Nom" type="TextureRect" parent="."]
-margin_left = 62.1301
-margin_top = 226.832
-margin_right = 622.13
-margin_bottom = 306.832
+margin_left = 241.107
+margin_top = 412.804
+margin_right = 801.107
+margin_bottom = 492.804
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Start" type="TextureRect" parent="."]
-margin_left = 176.645
-margin_top = 289.05
-margin_right = 1076.64
-margin_bottom = 515.05
+margin_left = 364.591
+margin_top = 503.954
+margin_right = 1261.59
+margin_bottom = 734.954
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 __meta__ = {

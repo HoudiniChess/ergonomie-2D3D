@@ -28,9 +28,9 @@ __meta__ = {
 }
 
 [node name="Head" type="TextureRect" parent="."]
-margin_left = 577.407
+margin_left = 661.816
 margin_top = 1.05946
-margin_right = 1377.41
+margin_right = 1474.82
 margin_bottom = 601.059
 rect_scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 5 )
@@ -38,23 +38,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ZombiesNumber" type="Label" parent="."]
-margin_left = 547.465
-margin_top = 11.1189
-margin_right = 575.465
-margin_bottom = 42.1189
-rect_scale = Vector2( 2, 2 )
-text = "7
-"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Goal" type="Label" parent="."]
-margin_left = 291.665
-margin_top = 9.53517
-margin_right = 498.665
-margin_bottom = 40.5352
+margin_left = 481.309
+margin_top = 10.5946
+margin_right = 688.309
+margin_bottom = 41.5947
 text = "Tuer tous les ennemis !"
