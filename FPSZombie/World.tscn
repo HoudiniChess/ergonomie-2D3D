@@ -15,21 +15,21 @@ albedo_color = Color( 0.0431373, 0.113725, 0.498039, 1 )
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.572549, 0.14902, 0.807843, 1 )
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.203922, 0.227451, 0.564706, 1 )
 
-[sub_resource type="CubeMesh" id=9]
+[sub_resource type="CubeMesh" id=5]
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 1.21822, 1.23572, 1.88023 )
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0.137255, 0.866667, 0.266667, 1 )
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=8]
 albedo_color = Color( 0.0117647, 0.0117647, 0.0117647, 1 )
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=9]
 albedo_color = Color( 0.0509804, 0.807843, 0.737255, 1 )
 
 [node name="World" type="Spatial"]
@@ -57,8 +57,8 @@ material = SubResource( 3 )
 [node name="cube" type="MeshInstance" parent="."]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 32.9334, 5.99582, 0.000375353 )
 layers = 3
-material_override = SubResource( 8 )
-mesh = SubResource( 9 )
+material_override = SubResource( 4 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="cube"]
@@ -68,34 +68,28 @@ light = NodePath("../../SpotLight")
 on_by_default = false
 
 [node name="CollisionShape" type="CollisionShape" parent="cube/StaticBody"]
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CSGBox4" type="CSGBox" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -3.76747, 5.60857, 9.9445 )
 use_collision = true
-material = SubResource( 4 )
+material = SubResource( 7 )
 
 [node name="CSGBox5" type="CSGBox" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 27.1599, 30.3417, 29.3898 )
 use_collision = true
-material = SubResource( 5 )
+material = SubResource( 8 )
 
 [node name="CSGBox6" type="CSGBox" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -3.76747, 22.2805, 0 )
 use_collision = true
-material = SubResource( 6 )
+material = SubResource( 9 )
 
 [node name="Escalier" parent="." instance=ExtResource( 2 )]
 transform = Transform( 3, 0, 0, 0, 4, 0, 0, 0, 3, -41, 3, 5 )
 
 [node name="TheRealNinja" parent="." instance=ExtResource( 1 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -28.5448, 3, -29.1234 )
-
-[node name="Zombies" type="Spatial" parent="."]
-transform = Transform( 0.700884, 0, -0.713275, 0, 1, 0, 0.713275, 0, 0.700884, 0, 0, -14.837 )
-
-[node name="Zombie" parent="Zombies" instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 5.447, 0 )
 
 [node name="UI" type="Control" parent="."]
 anchor_right = 1.0
@@ -141,3 +135,23 @@ spot_angle = 80.1563
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 4 )
+
+[node name="Zombies" type="Spatial" parent="."]
+
+[node name="zombie1" type="Spatial" parent="Zombies"]
+
+[node name="Zombie" parent="Zombies/zombie1" instance=ExtResource( 3 )]
+transform = Transform( -1.82378, 0, -0.820864, 0, 2, 0, 0.820864, 0, -1.82378, -24.9705, 5.42772, -2.37774 )
+
+[node name="zombie3" type="Spatial" parent="Zombies"]
+
+[node name="Zombie" parent="Zombies/zombie3" instance=ExtResource( 3 )]
+transform = Transform( -1.82378, 0, -0.820864, 0, 2, 0, 0.820864, 0, -1.82378, 22.6603, 5.42772, -38.6701 )
+
+[node name="zombie2" type="Spatial" parent="Zombies"]
+
+[node name="Zombie" parent="Zombies/zombie2" instance=ExtResource( 3 )]
+transform = Transform( -1.82378, 0, -0.820864, 0, 2, 0, 0.820864, 0, -1.82378, 6.71598, 5.42772, 33.6143 )
+
+[node name="Zombie" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -15.6278, 6.2756, -8.58921 )

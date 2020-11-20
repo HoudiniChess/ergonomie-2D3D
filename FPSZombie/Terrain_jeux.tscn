@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Escalier.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Textures/Texture_sol2.jpg" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Son/laura_piano_jeu_ambiance.wav" type="AudioStream" id=21]
 [ext_resource path="res://Terrain_jeux.gd" type="Script" id=22]
 [ext_resource path="res://Gui.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Zombie/MyZombie.tscn" type="PackedScene" id=24]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -506,11 +507,8 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -73, 1,
 [node name="Porte" parent="Accessoires/Spatial" instance=ExtResource( 10 )]
 transform = Transform( 2.5, 0, 0, 0, 2.4, 0, 0, 0, 3, 47, -2, -75 )
 
-[node name="myNewLittleNinja" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.8725, 0, -61.2831 )
-
 [node name="Terrain_1Etage" parent="." instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0584717, 29.0709, -0.287767 )
 
 [node name="Toit RDC" parent="." instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, 0 )
@@ -519,3 +517,47 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, 0 )
 stream = ExtResource( 21 )
 
 [node name="Gui" parent="." instance=ExtResource( 23 )]
+
+[node name="TheRealNinja" parent="." instance=ExtResource( 16 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 32.8233, 0, -57.9346 )
+
+[node name="Zombies" type="Spatial" parent="."]
+
+[node name="Zombie1" type="Spatial" parent="Zombies"]
+
+[node name="Zombie" parent="Zombies/Zombie1" instance=ExtResource( 24 )]
+transform = Transform( -1.0425, 0, -1.70681, 0, 2, 0, 1.70681, 0, -1.0425, -25.9132, 1.66386, 35.3981 )
+
+[node name="Zombie2" type="Spatial" parent="Zombies"]
+
+[node name="Zombie" parent="Zombies/Zombie2" instance=ExtResource( 24 )]
+transform = Transform( 1.263, 0, -1.55075, 0, 2, 0, 1.55075, 0, 1.263, -53.5844, 1.66386, -43.2763 )
+
+[node name="Zombie3" type="Spatial" parent="Zombies"]
+
+[node name="Zombie" parent="Zombies/Zombie3" instance=ExtResource( 24 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 4.38515, 1.66386, 9.22988 )
+
+[node name="Zombie4" type="Spatial" parent="Zombies"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, -38.2315 )
+
+[node name="Zombie" parent="Zombies/Zombie4" instance=ExtResource( 24 )]
+transform = Transform( 1.06876, 0, 1.69049, 0, 2, 0, -1.69049, 0, 1.06876, 0, 1.66386, 0 )
+
+[node name="Zombie5" type="Spatial" parent="Zombies"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, 0 )
+
+[node name="Zombie" parent="Zombies/Zombie5" instance=ExtResource( 24 )]
+transform = Transform( -1.93264, 0, -0.514704, 0, 2, 0, 0.514704, 0, -1.93264, -46.7562, 1.66386, -5.57338 )
+
+[node name="Zombie6" type="Spatial" parent="Zombies"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, 0 )
+
+[node name="Zombie" parent="Zombies/Zombie6" instance=ExtResource( 24 )]
+transform = Transform( 1.49805, 0, -1.32508, 0, 2, 0, 1.32508, 0, 1.49805, 22.7052, 1.66386, 0 )
+
+[node name="Zombie7" type="Spatial" parent="Zombies"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, 0 )
+
+[node name="Zombie" parent="Zombies/Zombie7" instance=ExtResource( 24 )]
+transform = Transform( 0.0177671, 0, -1.99992, 0, 2, 0, 1.99992, 0, 0.0177671, -0.0297508, 1.68612, 27.7911 )

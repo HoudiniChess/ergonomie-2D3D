@@ -2,19 +2,20 @@ extends KinematicBody
 
 var textureBlack = load("res://skin/zombie_spec.dds")
 var texture = load("res://skin/zombie_diff.dds")
+var max_health = 10
+var health = 10
 
 enum states {PATROL, CHASE, ATTACK, DEAD}
 var state = states.PATROL
 
 # For setting animations.
 
-var anim_state
 var run_speed = 25
 var attacks = ["Zombie attack-loop"]
 
 # For path following.
 
-export (NodePath) var patrol_path
+export (NodePath) var patrol_path 
 var patrol_points
 var patrol_index = 0
 
@@ -25,8 +26,13 @@ var velocity = Vector3(run_speed, 0, 0)
 
 var move_speed = 100
 
+func _ready():
+	if patrol_path:
+		# bug when put .curve.
+		patrol_points = get_node(patrol_path)
 
 func _physics_process(delta):
+
 	choose_action()
 	# Changing the x scale flips the sprite and its attack area.
 
@@ -64,10 +70,12 @@ func choose_action():
 
 		# Move along assigned path.
 
+		# not really working yet, after add a path node and join it to the zombie,
+		# this one just walk without actually moving forward
 		states.PATROL:
 			if !patrol_path:
 				return
-			target = patrol_points[patrol_index]
+			target = Vector3.ZERO
 			if global_transform.origin.distance_to(target) < 1:
 				patrol_index = wrapi(patrol_index + 1, 0, patrol_points.size())
 				target = patrol_points[patrol_index]
@@ -82,19 +90,12 @@ func choose_action():
 		# Make an attack.
 
 		states.ATTACK:
-			print("bonjour toi")
 			target = player.global_transform.origin
-			print("bonjour toi1")
 			if target.x > global_transform.origin.x:
-				print("bonjour toi2")
 				$"../Zombie".scale.x = 1
-				print("bonjour toi3")
 			elif target.x < global_transform.origin.x:
-				print("bonjour toi4")
 				$"../Zombie".scale.x = -1
-				print("bonjour toi5")
 			$AnimationPlayer.play("Zombie Attack-loop")
-			print("bonjour toi6")
 	
 func _on_Area_body_entered(body):
 	if body.is_in_group("Player"):
@@ -123,3 +124,15 @@ func set_texture_black():
 
 func set_normal_texture():
 	$Armature/Skeleton/LOWPOLY.get_surface_material(0).set_texture(SpatialMaterial.TEXTURE_ALBEDO, texture)
+
+
+func _on_Zombie_input_event(camera, event, click_position, click_normal, shape_idx):
+		if event.button_index == BUTTON_RIGHT and event.pressed:
+			print("coucou")
+			health -= 1
+			$HealthBar3D.update(health, max_health)
+			if health <= 0:
+				$AnimationPlayer.play("Zombie Death-loop")
+				yield($AnimationPlayer, "animation_finished")
+				queue_free()
+

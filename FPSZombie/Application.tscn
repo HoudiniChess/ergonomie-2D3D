@@ -4,6 +4,7 @@
 [ext_resource path="res://Page accueil.tscn" type="PackedScene" id=2]
 
 [node name="Application" type="Spatial"]
+visible = false
 
 [node name="Terrain_RDC" parent="." instance=ExtResource( 1 )]
 
