@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/surican.obj-4de452e33d1f6ee2967a63d092c3485b.mesh"
+
+[deps]
+
+files=[ "res://.import/surican.obj-4de452e33d1f6ee2967a63d092c3485b.mesh" ]
+
+source_file="res://Shuriken/surican.obj"
+dest_files=[ "res://.import/surican.obj-4de452e33d1f6ee2967a63d092c3485b.mesh", "res://.import/surican.obj-4de452e33d1f6ee2967a63d092c3485b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

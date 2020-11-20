@@ -35,6 +35,7 @@ func check_collision():
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
 		if collider.is_in_group("Enemies"):
+			
 			collider.queue_free()
 			print("Killed " + collider.name)
 
